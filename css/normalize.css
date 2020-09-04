@@ -75,6 +75,9 @@
   
   a {
     background-color: transparent;
+     
+    color: cadetblue;
+    font-weight: 600;
   }
   
   /**
