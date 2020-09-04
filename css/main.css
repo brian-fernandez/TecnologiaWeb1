@@ -26,11 +26,12 @@ header, main, footer {
     margin: 1.25rem auto;
     padding: .5rem;
     max-width: 600px;
+    box-shadow: 0 5px 11px rgb(0,0,0,0.6);
 }
 
 header, footer, footer a {
     text-align: center;
-    background-color:#8A6694;
+    background-color:#2196f3;
     color: whitesmoke;
 }
 
@@ -42,5 +43,6 @@ header img {
 
 footer {
     font-size: 0.75rem;
+    box-shadow: 0 5px 11px rgb(0,0,0,0.6);
 }
 
