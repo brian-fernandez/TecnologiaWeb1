@@ -47,3 +47,14 @@ footer {
     
 }
 
+ul li a:hover{
+color: white;
+
+text-decoration: none;
+transition: .5s;
+background: rgb(99, 167, 230);
+padding: 3px;
+}
+
+ 
+
