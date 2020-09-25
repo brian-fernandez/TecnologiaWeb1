@@ -1,11 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asignacion 5</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <header>
+        <p>Brian Fernandez Mercado </p>
+        
+        <p>Responsive</p>
+    </header>
+    <section>
+        
+
+    </section>
+
+    <script>
+
+        /*Se crea dos constantes para seleccionar el header y section*/
+        const header = document.querySelector('header');
+        const section = document.querySelector('section');
+
+        /*fin de primer paso*/
+
+        /*Tambien creamos otros dos contates el primero almacena la Url para recuperar las variables que se requiera y la otra
+        constante para crear la solicitud*/
+        const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+        const request = new XMLHttpRequest();
+        /* fin de paso 2*/
+        /* abrimos el documento utilizandp el metodo Open()*/
+        request.open('GET', requestURL);
+        /*fin de paso 3*/
+
+
+        /* Utilizamos el metodo send() en request y tambien ingresamos el tipo de archivo con responseType*/
+        request.responseType = 'json';
+        request.send();
+        /* fin de paso 4*/
+
+
+        /*Se obtiene los datos de SuperHeroes en la cual se pasaran en header y section*/
+        request.onload = function () {
+            const superHeroes = request.response;
+            populateHeader(superHeroes);
+            showHeroes(superHeroes);
+            /*fin de paso 5*/
+
+        }
+
+
+        /* Creamos una funcion  llamada populateHeader en la cual utilizamos las constantes
+         que creamos y añadimos los datos*/
+        function populateHeader(jsonObj) {
+            const myH1 = document.createElement('h1');
+            myH1.textContent = jsonObj['squadName'];
+            header.appendChild(myH1);
+
+            const myPara = document.createElement('p');
+            myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+            header.appendChild(myPara);
+        }
+
+        /* fin de paso 6*/
+
+
+        /* Realizamos otra funcion en la cual crea los cards para tener todo los datos requeridos 
+        utilizando las etiquetas article, h2, p, ul. Utilizaremos for para repetir los cards*/
+
+        function showHeroes(jsonObj) {
+            const heroes = jsonObj['members'];
+
+            for (var i = 0; i < heroes.length; i++) {
+                const myArticle = document.createElement('article');
+                const myH2 = document.createElement('h2');
+                const myPara1 = document.createElement('p');
+                const myPara2 = document.createElement('p');
+                const myPara3 = document.createElement('p');
+                const myList = document.createElement('ul');
+
+                myH2.textContent = heroes[i].name;
+                myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
+                myPara2.textContent = 'Age: ' + heroes[i].age;
+                myPara3.textContent = 'Superpowers:';
+
+                const superPowers = heroes[i].powers;
+                for (var j = 0; j < superPowers.length; j++) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = superPowers[j];
+                    myList.appendChild(listItem);
+                }
+
+                myArticle.appendChild(myH2);
+                myArticle.appendChild(myPara1);
+                myArticle.appendChild(myPara2);
+                myArticle.appendChild(myPara3);
+                myArticle.appendChild(myList);
+
+                section.appendChild(myArticle);
+            }
+        }
+
+        /*Fin de paso 7*/
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
+
+body::-webkit-scrollbar
+{
+    background-color: white;
+    width: 0px;
+}
+
+
+
+
+
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+
+}
+body
+{
+    padding: 0;
+    margin: 0;
+    background-image: url(img/mom-4031411_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    z-index: 1000;
+    background: #ffffff94;
+    text-align: center;
+    width: auto;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 14px 40px rgba(0,0,0,0.1);
+}
+section
+{
+    position: relative;
+    display: flex;
+    /* margin: 20px; */
+    padding: 50px;
+    justify-content: center;
+}
+article{
+    background: #ffffff94;
+    ;
+    padding: 25px;
+    box-shadow: 0px 14px 40px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+h2{
+    text-align: center;
+    margin-bottom:20px ;
+}
+p
+{
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #444443;
+}
+ul{
+    list-style: inside;
+}
+
+article:hover
+{
+    animation: 1s ease forwards cajita;
+}
+@keyframes cajita
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    100%
+    {
+        transform: translateY(-10px);
+        background: white;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    section
+    {
+        display: block;
+    } 
+}
+
