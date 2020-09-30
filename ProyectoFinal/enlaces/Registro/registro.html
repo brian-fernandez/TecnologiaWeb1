@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/b7216b596768a00970f08dbbd187f038.png" type="image/x-icon">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="media.css">
+
+</head>
+
+<body>
+<div id="logo1"></div>
+
+    <a href="#logo1" class="buttomtop"> ^ </a>
+    <div class="contenedor-tiempo"> <span id="horas">00</span> : <span id="minutos">00</span> : <span
+            id="segundos">00</span>
+         
+        <script src="Time.js"></script>
+    </div>
+    <section class="sec">
+
+
+        <header>
+            <a  href="../../index.html" class="logo"> <strong style="font-size: 40px;"> Donar Plasma </strong>
+                <img style="width:50px;" src="../img/b7216b596768a00970f08dbbd187f038.png" alt=""></a>
+            <div class="toggleMenu" onclick="menuToogle()"></div>
+
+
+
+            <ul class="navigation">
+                <li><a class="active1" href="../../index.html">Inicio</a></li>
+
+
+                <li><a href="../Registro/registro.html">Donar Plasma</a></li>
+                <li><a href="../Listadeespera/Lista.html">Lista de espera</a></li>
+                <li><a href="../numero/numero.html">Numeros de emergencias</a></li>
+
+            </ul>
+        </header>
+
+    </section>
+
+    <section class="section2">
+        <div class="weave weave1"></div>
+        <div class="weave weave2"></div>
+        <div class="weave weave3"></div>
+        <div class="weave weave4"></div>
+
+
+
+        <div class="container">
+            <h1 class="titulo"> <span>Registro</span> <br> Lee las condiciones de registro.
+                <br>
+                <br>
+                Con el registro usted autoriza que el registro de su familiar, sea parte de nuestra base de datos de
+                necesitados de plasma, Donarplasma.com pondra esos datos para que el publico pueda verlo, manteniendo
+                para efecto de registros sus datos los cuales sólo serán otorgados a hospitales, clínicas y/o
+                autoridades de salud que así lo requieran.
+                <br>
+                <br>
+                El registro como FAMILIAR NECESITADO DE PLASMA se conforma en una declaración jurada voluntaria de la
+                veracidad de datos que usted declara, por lo que cualquier información falsa como actuar fuera de lo
+                ético y lo legal, será reportado.
+                <br>
+                <br>
+                Muchas gracias por participar, Juntos salvaremos más vidas. <br></h1>
+            <br>
+
+
+            <br>
+
+            <div class="container-botones">
+                <div class="botones-registro"><button class="boton" onclick="contenedor('donante')">Registrarse como
+                        donante</button></div>
+                <br>
+
+                <div class="botones-registro"><button class="boton" onclick="contenedor('donador')">Registrar a un
+                        necesitado de plasma</button></div>
+
+
+
+
+            </div>
+            <div id="donante" class="mostrador" style="display:none">
+                <div class="contenedor"></div>
+                <div class="row-2">
+                    <div class="col-1">
+                        <br>
+                        <p style="color: white;">Formulario de registro.
+                            <br>
+                            No olvides tus datos, por que los necesitaras para dar de baja un registro.</p>
+
+                        <form action="">
+                            <br>
+                            <label for="">Usuario</label>
+                            <br>
+                            <input type="text" placeholder="Ej: Steve">
+                            <br>
+                            <label for="">Correo Electronico</label>
+                            <br>
+                            <input type="email" placeholder="Ej: Steve@gmail.com">
+                            <br>
+                            <label for="">Contraseña</label>
+                            <br>
+                            <input type="password" placeholder="Su clave de acceso">
+                            <br>
+                            <label for="">Porfavor confirme su Contraseña</label>
+                            <br>
+                            <input type="password" placeholder="Repitua su clave de acceso">
+
+                            <br>
+                        </form>
+                    </div>
+                    <div class="col-2">
+
+                        <form action="">
+                            <label for="">Nombre completo</label>
+                            <input type="text" placeholder="Ej: Solo se acepta nombres Completos">
+                            <br>
+                            <label for="">Carnet de identidad</label>
+                            <input type="text" placeholder="EJ: 14696234">
+                            <br>
+                            <label for="">Ciudad donde vive</label>
+                            <br>
+                            <select id="cars" name="cars">
+                                <option value=""></option>
+                                <option value="Cochabamba">Cochabamba</option>
+                                <option value="La Paz">La Paz</option>
+                                <option value="Santa Cruz">Santa Cruz</option>
+                                <option value="Oruro">Oruro</option>
+                                <option value="Pando">Pando</option>
+
+                                <option value="Tarija">Tarija</option>
+
+                                <option value="Potosi">Potosi</option>
+
+                                <option value="Beni">Beni</option>
+
+                                <option value="Chuquisaca">Chuquisaca</option>
+                            </select>
+                            <br>
+                            <label for="">Tipo de sangre</label>
+                            <select name="sangre" id="sangre">
+                                <option value="" selected=""></option>
+                                <option value="A Positivo">A Positivo</option>
+                                <option value="B Positivo">B Positivo</option>
+                                <option value="O Positivo">O Positivo</option>
+                                <option value="AB Positivo">AB Positivo</option>
+                                <option value="A Negativo">A Negativo</option>
+                                <option value="B Negativo">B Negativo</option>
+                                <option value="O Negativo">O Negativo</option>
+                                <option value="AB Negativo">AB Negativo</option>
+
+                            </select>
+                            <br>
+                            <label for="">¿Tiene la prueba ELISA(IgM/IgG)?</label>
+                            <select name="respuesta" id="respuesta">
+                                <option value=""></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="row-2">
+                    <div class="col-1">
+                        <form action="">
+                            <label for="">Extensión de CI*</label>
+                            <select id="cars2" name="cars2">
+                                <option value=""></option>
+                                <option value="Cochabamba">Cochabamba</option>
+                                <option value="La Paz">La Paz</option>
+                                <option value="Santa Cruz">Santa Cruz</option>
+                                <option value="Oruro">Oruro</option>
+                                <option value="Pando">Pando</option>
+
+                                <option value="Tarija">Tarija</option>
+
+                                <option value="Potosi">Potosi</option>
+
+                                <option value="Beni">Beni</option>
+
+                                <option value="Chuquisaca">Chuquisaca</option>
+                            </select>
+
+                            <br>
+                            <label for="">Numero de whatsapp*</label>
+                            <input type="number" name="" id="">
+                            <br>
+                            <label for="">¿Tiene la prueba PCR-TR?</label>
+                            <select name="respuesta2" id="respuesta2">
+                                <option value=""></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+                            <br>
+                            <label for="">¿Esta dispuesto a viajar?</label>
+                            <select name="respuesta3" id="respuesta3">
+                                <option value=""></option>
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+
+                        </form>
+                    </div>
+                    <div class="col-2">
+                        <form action="">
+                            <p style="color: white;">Estoy deacuerdo con las <a href="../Aviso/aviso.html" target="_blank">politicas</a> de la pagina.</p>
+                            <input type="checkbox">
+                            <br>
+                            <input style="width: 100%;" type="submit" value="Enviar Informacion">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="donador" class="mostrador" style="display:none">
+                <div class="row-2">
+                    <div class="col-1">
+                        <br>
+                        <p style="color: white;">Formulario de registro.
+                            <br>
+                            No olvides tus datos, por que los necesitaras para dar de baja un registro.</p>
+
+                        <form action="">
+                            <br>
+                            <label for="">Usuario</label>
+                            <br>
+                            <input type="text" placeholder="Ej: Steve">
+                            <br>
+                            <label for="">Correo Electronico</label>
+                            <br>
+                            <input type="email" placeholder="Ej: Steve@gmail.com">
+                            <br>
+                            <label for="">Contraseña</label>
+                            <br>
+                            <input type="password" placeholder="Su clave de acceso">
+                            <br>
+                            <label for="">Porfavor confirme su Contraseña</label>
+                            <br>
+                            <input type="password" placeholder="Repitua su clave de acceso">
+
+
+                            <br>
+
+
+                        </form>
+                    </div>
+                    <div class="col-2">
+                        <form action="">
+                            <br>
+                            <label for="">Correo de notificacion</label>
+                            <input type="button" value="" placeholder="Ej:steve@gmail.com">
+                            <br>
+                            <label for="">Nombre del receptor</label>
+                            <input type="text" placeholder="Ej: Steve Jobs">
+                            <br>
+                            <label for="">Contacto Principal</label>
+                            <input type="text" placeholder="Ej: Daniela Flores">
+                            <br>
+                            <label for="">Tipo de sangre</label>
+                            <select name="sangre" id="sangre">
+                                <option value="" selected=""></option>
+                                <option value="A Positivo">A Positivo</option>
+                                <option value="B Positivo">B Positivo</option>
+                                <option value="O Positivo">O Positivo</option>
+                                <option value="AB Positivo">AB Positivo</option>
+                                <option value="A Negativo">A Negativo</option>
+                                <option value="B Negativo">B Negativo</option>
+                                <option value="O Negativo">O Negativo</option>
+                                <option value="AB Negativo">AB Negativo</option>
+
+                            </select>
+                            <br>
+                            <label for="">Telefono principal (whatsapp)</label>
+                            <input type="number" name="" id="" placeholder="Ej:69489012">
+                            <br>
+                            <label for="">Texto alternativo</label>
+                            <textarea name="" id="" cols="30" rows="10"
+                                placeholder="Aqui puedes poner alguna nota"></textarea>
+                            <br>
+                            <label for=""> Foto Max 2MB (100px X 100px)</label>
+                            <input type="file" name="" id="">
+                            <br>
+
+
+
+                            <br>
+                            <p style="color: white;">Estoy deacuerdo con las <a href="../Aviso/aviso.html" target="_blank">politicas</a> de la pagina.</p>
+                            <input type="checkbox">
+                            <br>
+
+                            <input type="submit" value="Enviar datos">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <br>
+
+
+    </section>
+
+
+    <div class="redes-sociales">
+
+        <a href=""> <span class="fa fa-facebook" aria-hidden="true"></span></a>
+        <a href=""> <span class="fa fa-whatsapp" aria-hidden="true"></span></a>
+        <a href=""> <span class="fa fa-twitter" aria-hidden="true"></span></a>
+        <a href=""> <span class="fa fa-instagram" aria-hidden="true"></span></a>
+
+    </div>
+
+    <script src="tabs.js"></script>
+
+    <!-- Fin tabs-->
+
+    <script>
+        function menuToogle() {
+            const menuToogle = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            menuToogle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        function vervideo() {
+            const trailer = document.querySelector(".trailer");
+            trailer.classList.toggle("active");
+
+        }
+
+
+
+
+    </script>
+    <script src="/enlaces/Registro/tabs.js"></script>
+    <footer>
+        <div class="row">
+            <div class="col-1">
+                <img style="width:100px;" src="../img/b7216b596768a00970f08dbbd187f038.png" alt="">
+                <p>#DONAR PLASMA</p>
+            </div>
+            <div class="col-2">
+
+
+                <h3>Menu de navegacion</h3>
+                <ul class="navigation">
+
+
+                    <li><a href="../../index.html">Inicio</a></li>
+
+
+                    <li><a href="../Registro/registro.html">Donar Plasma</a></li>
+                    <li><a href="../Listadeespera/Lista.html">Lista de espera</a></li>
+                    <li><a href="../numero/numero.html">Numeros de emergencias</a></li>
+
+                </ul>
+            </div>
+            <div class="col-3">
+
+
+                <p>
+                    El tráfico de plasma hiperinmune está prohibido en el mundo y en Bolivia, por lo que es penado por
+                    Ley.
+                    Si ud. ve alguna actividad sospechosa contactenos inmediatamente.
+                </p>
+                <br>
+                <div class="botones-registro">
+                    <a href="../Aviso/aviso.html">Leer aviso general</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <a href="https://portal.upds.edu.bo/index/"><img src="../img/logo_upds.png" alt=""></a>
+                <p>Estudiante: Brian fernandez Mercado <br>
+                    Carrera: Ingeneria de sistemas <br>
+                    Materia: Tegnologia Web I <br>
+                    Fecha: 09/09/2020 <br>
+                    Derechos reservados </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
